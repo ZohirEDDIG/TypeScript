@@ -6,7 +6,7 @@ TypeScript is a syntactic superset of JavaScript which adds **static typing**.
 This basically means that TypeScript adds syntax on top of JavaScript, allowing developers to add **types**.  
 TypeScript being a **Syntactic Superset** means it shares the same base syntax as JavaScript, but adds something to it.  
 
-## Why should I use TypeScript ? 
+## Why should I use TypeScript ?
 JavaScript is a loosely typed language.  
 It can be difficult to understand what types of data are being passed around in JavaScript.  
 In JavaScript, function parameters and variables don't have any information!  

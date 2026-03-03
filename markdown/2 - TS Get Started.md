@@ -111,7 +111,7 @@ Let's create a simple "Hello, World!" program to verify your TypeScript setup.
 hello.ts  
 ```typescript
 function greet(name: string): string {
-    return `Hello, ${name}!`;
+  return `Hello, ${name}!`;
 }
 
 const message: string = greet('World');
@@ -130,7 +130,7 @@ This will generate a `hello.js` file in the same directory:
 Example  
 ```javascript
 function greet(name) {
-    return `Hello, ${name}!`;
+  return `Hello, ${name}!`;
 }
 
 const message: string = greet('World');
@@ -152,3 +152,10 @@ Hello, World!
 ```  
 
 **Note:** If you're using the `tsconfig.json` configuration mentioned earlier, you would place your TypeScript files in the `src` directory and the compiled JavaScript will appear in the `build` directory.  
+
+## hello.d.ts / hello.d.ts.map / hello.js / hello.js.map
+By default when your typescript file `hello.ts` gets transpiled 4 different files get generated `hello.d.ts`, `hello.d.ts.map`, `hello.js`, `hello.js.map`. Bellow is a brief description for each one:   
+- `hello.d.ts`: The type declaration file. It contains only type definitions (interfaces, types, function signatures) without implementation. Useful when other projects import your code and need type information.
+- `hello.d.ts.map`: The source map for the declaration file. It maps the generated `.d.ts` back to the original `.ts` file for better tooling support and navigation.
+- `hello.js`: The compiled JavaScript file. This is the actual code that runs in the browser or Node.js after TypeScript is transpiled.  
+- `hello.js.map`: The source map for the JavaScript file. It links the compiled hello.js back to the original hello.ts, so debugging in the browser shows the TypeScript code instead of the compiled JS.

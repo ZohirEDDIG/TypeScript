@@ -38,7 +38,7 @@ Function with Explicit Types
 ```typescript
 // Function with explicit parameter and return types
 function greet(name: string): string {
-    return `Hello, ${name}!`;
+  return `Hello, ${name}!`;
 }
 
 // TypeScript will ensure you pass the correct argument type
@@ -62,7 +62,7 @@ let flags = [true, false, true];
 
 // TypeScript infers return type as 'number'
 function add(a: number, b: number) {
-    return a + b;
+  return a + b;
 }
 ```  
 
@@ -75,9 +75,9 @@ Object Literal Inference
 ```typescript
 // TypeScript infers the shape of the object
 const user = {
-    name: 'Alice',
-    age: 30,
-    isAdmin: true
+  name: 'Alice',
+  age: 30,
+  isAdmin: true
 };
 
 // TypeScript knows these properties exist
@@ -85,7 +85,7 @@ console.log(user.name);  // OK
 console.log(user.email); // Error: Property 'email' does not exist
 ```  
 
-**Watch Out:** While type inference is convenient, being explicit with types can make your code more maintainable, especially in larger codebases or public APIs.
+**Watch Out:** While type inference is convenient, being explicit with types can make your code more maintainable, especially in larger codebases or public APIs.  
 
 ## Type Safety in Action
 One of TypeScript's main benefits is catching type-related errors during development.  
@@ -112,7 +112,7 @@ JavaScript Behavior
 ```javascript
 // This is valid JavaScript but can lead to bugs
 function add(a, b) {
-    return a + b;
+  return a + b;
 }
 
 console.log(add("5", 3)); // Returns "53" (string concatenation)
@@ -124,7 +124,7 @@ TypeScript Type Safety
 ```typescript
 // This is valid JavaScript but can lead to bugs
 function add(a: number, b: number): number {
-    return a + b;
+  return a + b;
 }
 
 console.log(add("5", 3)); // Error: Argument of type 'string' is not assignable to parameter of type 'number'
@@ -133,7 +133,7 @@ console.log(add("5", 3)); // Error: Argument of type 'string' is not assignable 
 ## When TypeScript Can't Infer Types
 While TypeScript's type inference is powerful, there are cases where it can't determine the correct type.  
 In these situations, TypeScript falls back to the `any` type, which disables type checking.  
-Note: any and other Special Types are covered in more detail in the next chapter.  
+Note: `any` and other Special Types are covered in more detail in the next chapter.  
 
 Common Cases for `any`  
 ```typescript
@@ -152,4 +152,4 @@ Instead, consider these alternatives:
 - Use type annotations
 - Create interfaces for complex objects
 - Use type guards for runtime type checking
-- Enable noImplicitAny in your tsconfig.json
+- Enable `noImplicitAny` in your `tsconfig.json`

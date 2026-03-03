@@ -2,7 +2,7 @@
 TypeScript enhances JavaScript by adding static types.  
 
 ## JavaScript and TypeScript Primitives
-The most basic types in TypeScript are called primitives.  
+The most basic types in TypeScript are called **primitives**.  
 These types form the building blocks of more complex types in your applications.  
 TypeScript includes all JavaScript primitives plus additional type features.  
 Here are the five primitive types you'll use most often:
