@@ -1,50 +1,13 @@
-function getTime(): number {
-    return new Date().getTime();
-}
+let x: unknown = 'hello';
+console.log((x as string).length);
 
-console.log(getTime());
+let y: unknown = 4;
+console.log((y as string).length); // prints undefined since numbers don't have a length
 
-function printHello(): void {
-    console.log('Hello!');
-}
+// console.log((4 as string).length); // Error: Conversion of type 'number' to type 'string' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
 
-printHello();
+let z: unknown = 'hello';
+console.log((<string>z).length);
 
-function multiply(a: number, b: number) {
-    return a * b;
-}
-
-console.log(multiply(5, 2));
-
-// function add(a: number, b: number, c?: number) {
-//     return a + b + (c || 0);
-// }
-
-// console.log(add(1, 2, 3));
-// console.log(add(1, 2));
-
-function pow(value: number, exponent: number = 10) {
-    return value ** exponent;
-}
-
-console.log(pow(2, 2));
-console.log(pow(2));
-
-function divide({ dividend, divisor }: { dividend: number; divisor: number }) {
-    return dividend / divisor;
-}
-
-console.log(divide({ dividend: 10, divisor: 2 }));
-
-function add(a: number, b: number, ...rest: number[]) {
-    return a + b + rest.reduce((p, c) => p + c, 0);
-}
-
-console.log(add(10, 10, 10, 10, 10));
-
-
-type Negate = (value: number) => number;
-
-const negateFunction: Negate = (value) => value * -1;
-
-console.log(negateFunction(10))
+let a = 'hello';
+console.log(((a as unknown) as number).length); // x is not actually a number so this will return undefined
